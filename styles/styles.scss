@@ -57,8 +57,9 @@ main {
 
     button {
       padding: 16px 32px;
+      background-color: $very_light_gray;
       border-radius: 100px;
-      border: none;
+      border-color: transparent;
       font-family: $lexend;
       width: fit-content;
       font-size: 15px ;
@@ -83,6 +84,29 @@ main {
     background-color: $very_dark_cyan;
     button {
       color: $very_dark_cyan;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    max-width: 920px;
+
+    section {
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        margin-top: 40px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: $very_light_gray;
+        border: 2px solid $very_light_gray;
+      }
     }
   }
 }

@@ -60,8 +60,9 @@ main section p {
 }
 main section button {
   padding: 16px 32px;
+  background-color: hsl(0deg, 0%, 95%);
   border-radius: 100px;
-  border: none;
+  border-color: transparent;
   font-family: "Lexend Deca", sans-serif;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -85,4 +86,29 @@ main section:nth-child(3) {
 }
 main section:nth-child(3) button {
   color: hsl(179deg, 100%, 13%);
+}
+
+@media (min-width: 768px) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 920px;
+  }
+  main section {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  main section button {
+    margin-top: 40px;
+  }
+  main section button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: hsl(0deg, 0%, 95%);
+    border: 2px solid hsl(0deg, 0%, 95%);
+  }
 }/*# sourceMappingURL=styles.css.map */
